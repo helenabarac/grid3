@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+        .container {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 4fr 1fr;
+          text-align: center;
+          max-width: 650px;
+          margin: auto;
+        }
+        .Header {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: lightskyblue;
+            padding: 10px;
+            text-align: center;
+            height: 20px;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .Path {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: lightpink;
+            padding: 10px;
+            text-align: center;
+            height: 20px;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .Docktop {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: yellow;
+            padding: 10px;
+            text-align: center;
+            height: 20px;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .Content {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 8;
+            background-color: lightgray;
+            padding: 10px;
+            text-align: center;
+        }
+        .Dockright {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 8;
+            background-color: lightgreen;
+            padding: 10px;
+            text-align: center;
+        }
+        .Footer {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 8;
+            grid-row-end: 9;
+            background-color: lightsalmon;
+            padding: 10px;
+            text-align: center;
+            height: 20px;
+        }
+        @media (max-width: 768px) {
+         .container {
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+        }
+
+        .Header,
+        .Path,
+        .Docktop,
+        .Footer {
+        grid-column: 1 / 2;
+        grid-row: auto;
+        height: auto;
+        }
+
+        .Content,
+        .Dockright {
+        grid-column: 1 / 2;
+        grid-row: auto;
+        height: 300px; 
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="Header">Header</div>
+       <div class="Path">Path</div>
+       <div class="Docktop">Docktop</div>
+       <div class="Content">Content</div>
+       <div class="Dockright">Dockright</div>
+       <div class="Footer"><Footer>Footer</Footer></div>
+    </div>        
+</body>
+</html>
